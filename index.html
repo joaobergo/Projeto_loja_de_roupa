@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Store Santa Rita - Estilo pra quem é autêntico!</title>
+      <link rel="stylesheet" href="./style/style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo" onclick="showPage('home')">
+                <div class="logo-circle">
+                    <div class="logo-js">JS</div>
+                    <div class="logo-store">STORE</div>
+                </div>
+                <div class="logo-text">
+                    <h1>JS STORE</h1>
+                    <p>Santa Rita</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a onclick="showPage('home')">Início</a></li>
+                    <li><a onclick="showPage('sobre')">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="tagline">🛍️ Estilo pra quem é autêntico!</div>
+                <h2>JS STORE SANTA RITA</h2>
+                <p>Desde 2022 trazendo moda e estilo para você</p>
+                <a href="https://instagram.com/jsstore.santarita" target="_blank" class="instagram-link">
+                    📱 Siga @jsstore.santarita
+                </a>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <!--<section class="info-section">
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>214</h3>
+                    <p>Posts</p>
+                </div>
+                <div class="info-item">
+                    <h3>1.878</h3>
+                    <p>Seguidores</p>
+                </div>
+                <div class="info-item">
+                    <h3>2022</h3>
+                    <p>Desde</p>
+                </div>
+            </div>
+        </section>
+    -->
+
+        <!-- Preview das Categorias -->
+        <section class="container">
+            <h2 class="section-title">Nossas Categorias</h2>
+            <div class="products-grid">
+                <div class="product-card" onclick="showPage('catalogo'); filterProducts('moletom')">
+                    <div class="product-image">🧥</div>
+                    <div class="product-info">
+                        <h3>Moletons</h3>
+                        <p>Conforto e estilo para o dia a dia</p>
+                        <a href="./moletom.html"><button class="btn-comprar">Ver Moletom</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="showPage('catalogo'); filterProducts('tenis')">
+                    <div class="product-image">👟</div>
+                    <div class="product-info">
+                        <h3>Tênis</h3>
+                        <p>Os melhores modelos para você</p>
+                        <a href="./tenis.html"><button class="btn-comprar">Ver Tênis</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="showPage('catalogo'); filterProducts('camiseta')">
+                    <div class="product-image">👕</div>
+                    <div class="product-info">
+                        <h3>Camisetas</h3>
+                        <p>Estilo premium para todos</p>
+                        <a href="./camiseta.html"><button class="btn-comprar">Ver Camisetas</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="showPage('catalogo'); filterProducts('short')">
+                    <div class="product-image">🩳</div>
+                    <div class="product-info">
+                        <h3>Shorts</h3>
+                        <p>Conforto para os dias quentes</p>
+                        <button class="btn-comprar" onclick="showPage('catalogo'); filterProducts('short')">Ver Shorts</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="showPage('catalogo'); filterProducts('calca')">
+                    <div class="product-image">👖</div>
+                    <div class="product-info">
+                        <h3>Calças</h3>
+                        <p>Qualidade e durabilidade</p>
+                        <button class="btn-comprar" onclick="showPage('catalogo'); filterProducts('calca')">Ver Calças</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="showPage('catalogo'); filterProducts('acessorio')">
+                    <div class="product-image">👜</div>
+                    <div class="product-info">
+                        <h3>Acessórios</h3>
+                        <p>Complete seu look</p>
+                        <button class="btn-comprar" onclick="showPage('catalogo'); filterProducts('acessorio')">Ver Acessórios</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CATÁLOGO PAGE
+    <div id="catalogo" class="page">
+        <div class="breadcrumb">
+            <div class="breadcrumb-content">
+                <a onclick="showPage('home')">Início</a> > <span>Catálogo Completo</span>
+            </div>
+        </div>
+
+        <section class="container">
+            <h2 class="section-title">Catálogo Completo</h2>
+        -->
+            
+            <!-- Filtros -->
+            <div class="catalog-filter">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterProducts('todos')">Todos</button>
+                    <button class="filter-btn" onclick="filterProducts('moletom')">🧥 Moletons</button>
+                    <button class="filter-btn" onclick="filterProducts('tenis')">👟 Tênis</button>
+                    <button class="filter-btn" onclick="filterProducts('camiseta')">👕 Camisetas</button>
+                    <button class="filter-btn" onclick="filterProducts('short')">🩳 Shorts</button>
+                    <button class="filter-btn" onclick="filterProducts('calca')">👖 Calças</button>
+                    <button class="filter-btn" onclick="filterProducts('acessorio')">👜 Acessórios</button>
+                </div>
+            </div>
+
+            <!-- Produtos do Catálogo -->
+            <div class="products-grid" id="catalogoGrid"> 
+
+
+   
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-circle" style="margin: 0 auto 25px;">
+                    <div class="logo-js">JS</div>
+                    <div class="logo-store">STORE</div>
+                </div>
+            </div>
+            <h3 style="font-size: 32px; margin-bottom: 15px; font-weight: 900;">JS STORE SANTA RITA</h3>
+            <p style="font-size: 18px; margin-bottom: 20px;">🛍️ Estilo pra quem é autêntico!</p>
+            <p style="color: var(--light-gray); margin-bottom: 10px;">📍 Desde 2022</p>
+            
+            <div class="footer-social">
+                <a href="https://instagram.com/jsstore.santarita" target="_blank">📱 Instagram</a>
+                <a href="https://wa.me/5583999999999" target="_blank">💬 WhatsApp</a>
+            </div>
+
+            <div class="footer-info">
+                <p>&copy; 2024 JS Store Santa Rita. Todos os direitos reservados.</p>
+                <p style="margin-top: 10px;">Santa Rita - Paraíba | @jsstore.santarita</p>
+            </div>
+        </div>
+    </footer>
+     <div id="sobre" class="page">
+
+        <!-- Hero Sobre -->
+        <section class="sobre-hero">
+            <div class="sobre-hero-content">
+                <div class="sobre-hero-logo">
+                    <div class="logo-js">JS</div>
+                    <div class="logo-store">STORE</div>
+                </div>
+                <h2>SOBRE NÓS</h2>
+                <p>Conheça a história por trás do estilo autêntico de Santa Rita</p>
+            </div>
+        </section>
+
+        <!-- Nossa História -->
+        <section class="historia-section">
+            <div class="historia-grid">
+                <div class="historia-text">
+                    <h2>Nossa História</h2>
+                    <p>
+                        A <strong>JS Store</strong> nasceu em <strong>2022</strong> com um sonho simples: 
+                        trazer moda de qualidade, estilo e autenticidade para as ruas de Santa Rita. 
+                        O que começou como um projeto pequeno, rapidamente se tornou referência em moda 
+                        urbana na região.
+                    </p>
+                    <div class="destaque">
+                        "Estilo pra quem é autêntico!" — esse é nosso lema e nossa promessa para cada cliente.
+                    </div>
+                    <p>
+                        Com um olhar atento às tendências nacionais e internacionais, selecionamos 
+                        cuidadosamente cada peça do nosso catálogo para garantir que você encontre 
+                        sempre o melhor em qualidade e estilo, com preços que cabem no seu bolso.
+                    </p>
+                    <p>
+                        Hoje, com mais de <strong>1.800 seguidores</strong> no Instagram e centenas 
+                        de clientes satisfeitos, seguimos crescendo e nos reinventando, sempre com 
+                        o mesmo propósito: vestir você com atitude.
+                    </p>
+                </div>
+                <div class="historia-foto">
+                    <div class="foto-principal">🏪</div>
+                    <div class="foto-badge">
+                        <span>2+</span>
+                        <span>Anos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Números -->
+        <section class="numeros-section">
+            <div class="numeros-grid">
+                <div class="numero-item">
+                    <span class="numero-icon">📦</span>
+                    <h3>214</h3>
+                    <p>Posts no Instagram</p>
+                </div>
+                <div class="numero-item">
+                    <span class="numero-icon">❤️</span>
+                    <h3>1.878</h3>
+                    <p>Seguidores</p>
+                </div>
+                <div class="numero-item">
+                    <span class="numero-icon">😊</span>
+                    <h3>500+</h3>
+                    <p>Clientes Satisfeitos</p>
+                </div>
+                <div class="numero-item">
+                    <span class="numero-icon">🛍️</span>
+                    <h3>2022</h3>
+                    <p>Fundação da Loja</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nossos Valores -->
+        <section class="valores-section">
+            <h2 class="section-title">Nossos Valores</h2>
+            <div class="valores-grid">
+                <div class="valor-card">
+                    <span class="valor-icon">✅</span>
+                    <h3>Qualidade</h3>
+                    <p>Cada peça é cuidadosamente selecionada para garantir o melhor em qualidade e durabilidade para nossos clientes.</p>
+                </div>
+                <div class="valor-card">
+                    <span class="valor-icon">🔥</span>
+                    <h3>Autenticidade</h3>
+                    <p>Acreditamos que moda é expressão. Por isso, priorizamos peças que refletem personalidade e estilo único.</p>
+                </div>
+                <div class="valor-card">
+                    <span class="valor-icon">🤝</span>
+                    <h3>Confiança</h3>
+                    <p>Construímos relações duradouras com nossos clientes baseadas na transparência, honestidade e respeito.</p>
+                </div>
+                <div class="valor-card">
+                    <span class="valor-icon">💰</span>
+                    <h3>Preço Justo</h3>
+                    <p>Moda de qualidade não precisa custar uma fortuna. Trabalhamos para oferecer sempre o melhor custo-benefício.</p>
+                </div>
+                <div class="valor-card">
+                    <span class="valor-icon">🚀</span>
+                    <h3>Inovação</h3>
+                    <p>Estamos sempre atentos às novas tendências para trazer o que há de mais moderno e estiloso para você.</p>
+                </div>
+                <div class="valor-card">
+                    <span class="valor-icon">🌟</span>
+                    <h3>Atendimento</h3>
+                    <p>Cada cliente é especial. Nosso time está sempre pronto para ajudar você a encontrar o look perfeito.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section class="galeria-section">
+            <h2 class="section-title">Nossa Galeria</h2>
+            <div class="galeria-grid">
+                <div class="galeria-item tall">
+                    👕
+                    <div class="galeria-overlay">
+                        <h4>Coleção Masculina</h4>
+                        <p>Estilo e atitude para o dia a dia</p>
+                    </div>
+                    <div class="galeria-label">Masculino</div>
+                </div>
+                <div class="galeria-item normal">
+                    👗
+                    <div class="galeria-overlay">
+                        <h4>Moda Feminina</h4>
+                        <p>Elegância em cada detalhe</p>
+                    </div>
+                    <div class="galeria-label">Feminino</div>
+                </div>
+                <div class="galeria-item normal">
+                    👟
+                    <div class="galeria-overlay">
+                        <h4>Tênis Premium</h4>
+                        <p>As melhores marcas para você</p>
+                    </div>
+                    <div class="galeria-label">Tênis</div>
+                </div>
+                <div class="galeria-item normal">
+                    🧥
+                    <div class="galeria-overlay">
+                        <h4>Moletons</h4>
+                        <p>Conforto e estilo juntos</p>
+                    </div>
+                    <div class="galeria-label">Moletons</div>
+                </div>
+                <div class="galeria-item normal">
+                    🧸
+                    <div class="galeria-overlay">
+                        <h4>Moda Infantil</h4>
+                        <p>Estilo para os pequenos</p>
+                    </div>
+                    <div class="galeria-label">Infantil</div>
+                </div>
+                <div class="galeria-item tall">
+                    👜
+                    <div class="galeria-overlay">
+                        <h4>Acessórios</h4>
+                        <p>Complete seu look</p>
+                    </div>
+                    <div class="galeria-label">Acessórios</div>
+                </div>
+                <div class="galeria-item normal">
+                    🩳
+                    <div class="galeria-overlay">
+                        <h4>Shorts & Bermudas</h4>
+                        <p>Perfeito para qualquer ocasião</p>
+                    </div>
+                    <div class="galeria-label">Shorts</div>
+                </div>
+                <div class="galeria-item normal">
+                    👖
+                    <div class="galeria-overlay">
+                        <h4>Calças</h4>
+                        <p>Qualidade e durabilidade</p>
+                    </div>
+                    <div class="galeria-label">Calças</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipe -->
+        <section class="equipe-section">
+            <h2 class="section-title">Nossa Equipe</h2>
+            <div class="equipe-grid">
+                <div class="equipe-card">
+                    <div class="equipe-foto">👨‍💼</div>
+                    <div class="equipe-info">
+                        <h3>João Silva</h3>
+                        <p class="cargo">Fundador & CEO</p>
+                        <p>Apaixonado por moda desde sempre, João fundou a JS Store com o objetivo de democratizar o acesso ao estilo de qualidade em Santa Rita.</p>
+                    </div>
+                </div>
+                <div class="equipe-card">
+                    <div class="equipe-foto">👩‍💼</div>
+                    <div class="equipe-info">
+                        <h3>Samira Costa</h3>
+                        <p class="cargo">Gerente & Compradora</p>
+                        <p>Com olhar apurado para tendências, Samira é responsável por selecionar as melhores peças para nosso catálogo.</p>
+                    </div>
+                </div>
+                <div class="equipe-card">
+                    <div class="equipe-foto">👩‍🎨</div>
+                    <div class="equipe-info">
+                        <h3>Ana Ribeiro</h3>
+                        <p class="cargo">Social Media</p>
+                        <p>Criativa e antenada, Ana cuida de toda a comunicação digital da JS Store, incluindo nosso Instagram @jsstore.santarita.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section class="depoimentos-section">
+            <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <div class="depoimento-aspas">"</div>
+                    <div class="estrelas">★★★★★</div>
+                    <p>Melhor loja de Santa Rita! As peças são incríveis, qualidade top e o atendimento é excepcional. Super recomendo!</p>
+                    <div class="depoimento-autor">
+                        <div class="autor-avatar">😊</div>
+                        <div class="autor-info">
+                            <h4>Maria Santos</h4>
+                            <span>Cliente desde 2022</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-aspas">"</div>
+                    <div class="estrelas">★★★★★</div>
+                    <p>Comprei várias camisetas e moletons. Qualidade incrível pelo preço! A JS Store virou minha loja favorita.</p>
+                    <div class="depoimento-autor">
+                        <div class="autor-avatar">😎</div>
+                        <div class="autor-info">
+                            <h4>Carlos Oliveira</h4>
+                            <span>Cliente desde 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-aspas">"</div>
+                    <div class="estrelas">★★★★★</div>
+                    <p>Sempre encontro o que preciso aqui. Atendimento rápido pelo WhatsApp e entrega pontual. Nota 10!</p>
+                    <div class="depoimento-autor">
+                        <div class="autor-avatar">🥰</div>
+                        <div class="autor-info">
+                            <h4>Juliana Lima</h4>
+                            <span>Cliente desde 2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Missão -->
+        <section class="missao-section">
+            <div class="missao-content">
+                <h2>Nossa Missão</h2>
+                <p>
+                    Ser a maior referência em moda urbana e streetwear do interior da Paraíba, 
+                    oferecendo peças de qualidade com preços acessíveis, atendimento diferenciado 
+                    e um ambiente onde todo mundo se sente bem-vindo.
+                </p>
+                <div class="missao-tags">
+                    <span class="missao-tag">🛍️ Moda de Qualidade</span>
+                    <span class="missao-tag">💪 Estilo Autêntico</span>
+                    <span class="missao-tag">🌟 Atendimento 5 Estrelas</span>
+                    <span class="missao-tag">🚀 Sempre Evoluindo</span>
+                    <span class="missao-tag">❤️ Feito com Amor</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Faça Parte da Nossa História</h2>
+                <p>
+                    Venha conhecer nosso catálogo completo ou nos siga no Instagram 
+                    para não perder nenhuma novidade, promoção ou lançamento!
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" onclick="showPage('catalogo')">
+                        🛍️ Ver Catálogo
+                    </button>
+                    <a href="https://instagram.com/jsstore.santarita" target="_blank" class="btn-secondary">
+                        📱 Seguir no Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- =================== FOOTER =================== 
+    <footer>
+        <div class="footer-content">
+            <div class="logo-circle" style="margin: 0 auto 25px;">
+                <div class="logo-js">JS</div>
+                <div class="logo-store">STORE</div>
+            </div>
+            <h3 style="font-size: 30px; margin-bottom: 10px; font-weight: 900;">JS STORE SANTA RITA</h3>
+            <p style="font-size: 17px; margin-bottom: 15px;">🛍️ Estilo pra quem é autêntico!</p>
+            <p style="color: #c0c0c0; font-size: 14px;">📍 Santa Rita - Paraíba | Desde 2022</p>
+            <div class="footer-social">
+                <a href="https://instagram.com/jsstore.santarita" target="_blank">📱 Instagram</a>
+                <a href="https://wa.me/5583999999999" target="_blank">💬 WhatsApp</a>
+                <a onclick="showPage('catalogo')">📦 Catálogo</a>
+                <a onclick="showPage('sobre')">ℹ️ Sobre Nós</a>
+            </div>
+            <div class="footer-info">
+                <p>© 2024 JS Store Santa Rita. Todos os direitos reservados.</p>
+                <p style="margin-top: 8px;">@jsstore.santarita</p>
+            </div>
+        </div>
+    </footer>
+-->
+
+    <script>
+        // Sistema de páginas
+        function showPage(pageId) {
+            // Esconder todas as páginas
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Mostrar página selecionada
+            document.getElementById(pageId).classList.add('active');
+            
+            // Scroll para o topo
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // Se for catálogo, mostrar todos os produtos
+            if(pageId === 'catalogo') {
+                filterProducts('todos');
+            }
+        }
+
+        // Sistema de filtros
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('#catalogoGrid .product-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Atualizar botões ativos
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filtrar produtos
+            cards.forEach(card => {
+                if (category === 'todos' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Smooth scroll para links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Botões de compra
+        document.querySelectorAll('.btn-comprar').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const productName = this.closest('.product-info').querySelector('h3').textContent;
+                const productPrice = this.closest('.product-info').querySelector('.product-price').textContent.split('R$')[1].trim().split(' ')[0];
+                const message = `Olá! Tenho interesse no produto:\n\n📦 ${productName}\n💰 R$ ${productPrice}\n\nPoderia me dar mais informações?`;
+                const whatsappURL = `https://wa.me/5583999999999?text=${encodeURIComponent(message)}`;
+                window.open(whatsappURL, '_blank');
+            });
+        });
+
+        // Animação de entrada dos produtos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+
+        // Seleção de tamanhos
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                // Remove seleção dos outros botões do mesmo produto
+                this.closest('.product-sizes').querySelectorAll('.size-btn').forEach(b => {
+                    b.style.background = 'var(--white)';
+                    b.style.color = 'var(--primary-black)';
+                });
+                // Marca o selecionado
+                this.style.background = 'var(--primary-black)';
+                this.style.color = 'var(--white)';
+            });
+        });
+    </script>
+</body>
+</html>
