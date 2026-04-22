@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+  <header>
+        <div class="header-content">
+            <div class="logo" onclick="showPage('home')">
+                <div class="logo-circle">
+                    <div class="logo-js">JS</div>
+                    <div class="logo-store">STORE</div>
+                </div>
+                <div class="logo-text">
+                    <h1>JS STORE</h1>
+                    <p>Santa Rita</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a onclick="showPage('sobre')">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<div class="margin">
+    <div class="products-grid">
+        <!-- TÊNIS 1 -->
+        <div class="product-card" data-category="tenis">
+            <div class="product-image">
+                <img src="./img/Tenis1.jfif" alt="Tenis1" class="imgs">
+            </div>
+            <div class="product-info">
+                <h3>Tênis New Balance 9060</h3>
+                <p>Tênis esportivo com tecnologia Air</p>
+                <div class="product-sizes">
+                    <span class="size-btn">38</span>
+                    <span class="size-btn">39</span>
+                    <span class="size-btn">40</span>
+                    <span class="size-btn">41</span>
+                    <span class="size-btn">42</span>
+                    <span class="size-btn">43</span>
+                </div>
+                <div class="product-price">R$ 279,90</div>
+                <button class="btn-comprar">Comprar Agora</button>
+            </div>
+        </div>
+
+        <!-- TÊNIS 2 -->
+        <div class="product-card" data-category="tenis">
+            <div class="product-image">
+                <img src="./img/tenis2.jfif" alt="Tenis2" class="imgs">   
+            </div>
+            <div class="product-info">
+                <h3>Tênis New Balance 9060</h3>
+                <p>Tênis esportivo com tecnologia Air</p>
+                <div class="product-sizes">
+                    <span class="size-btn">38</span>
+                    <span class="size-btn">39</span>
+                    <span class="size-btn">40</span>
+                    <span class="size-btn">41</span>
+                    <span class="size-btn">42</span>
+                    <span class="size-btn">43</span>
+                </div>
+                <div class="product-price">R$ 279,90</div>
+                <button class="btn-comprar">Comprar Agora</button>
+            </div>
+        </div>
+
+        <!-- TÊNIS 3 -->
+        <div class="product-card" data-category="tenis">
+            <div class="product-image">
+                <img src="./img/tenis3.jfif" alt="Tenis3" class="imgs">
+            </div>
+            <div class="product-info">
+                <h3>Tênis Nike Tn</h3>
+                <p>Estilo californiano moderno</p>
+                <div class="product-sizes">
+                    <span class="size-btn">36</span>
+                    <span class="size-btn">37</span>
+                    <span class="size-btn">38</span>
+                    <span class="size-btn">39</span>
+                    <span class="size-btn">40</span>
+                    <span class="size-btn">41</span>
+                </div>
+                <div class="product-price">R$ 224,90</div>
+               <button class="btn-comprar" onclick="window.open('https://wa.me19997496720,')">Comprar Agora</button>
+            </div>
+        </div>
+    </div> 
+</div>
+</body>
+</html>
