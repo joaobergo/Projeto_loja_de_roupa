@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+  <header>
+        <div class="header-content">
+            <div class="logo" onclick="showPage('home')">
+                <div class="logo-circle">
+                    <div class="logo-js">JS</div>
+                    <div class="logo-store">STORE</div>
+                </div>
+                <div class="logo-text">
+                    <h1>JS STORE</h1>
+                    <p>Santa Rita</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a onclick="showPage('sobre')">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+     <!-- INFANTIL PAGE -->
+    <div id="infantil" class="page">
+        <div class="breadcrumb">
+            <div class="breadcrumb-content">
+                <a onclick="showPage('home')">Início</a> > <span>Moda Infantil</span>
+            </div>
+        </div>
+
+        <section class="container">
+            <div class="category-header">
+                <h2>🧸 MODA INFANTIL</h2>
+                <p>Conforto e estilo para os pequenos</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge-desconto">-25%</span>
+                        👶
+                    </div>
+                    <div class="product-info">
+                        <h3>Conjunto Bebê Premium</h3>
+                        <p>Body + Calça confortável</p>
+                        <div class="product-sizes">
+                            <span class="size-btn">RN</span>
+                            <span class="size-btn">P</span>
+                            <span class="size-btn">M</span>
+                            <span class="size-btn">G</span>
+                        </div>
+                        <div class="product-price">
+                            R$ 69,90
+                            <small>R$ 92,90</small>
+                        </div>
+                        <button class="btn-comprar">Comprar Agora</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">👕</div>
+                    <div class="product-info">
+                        <h3>Camiseta Infantil Fun</h3>
+                        <p>Estampas divertidas</p>
+                        <div class="product-sizes">
+                            <span class="size-btn">2</span>
+                            <span class="size-btn">4</span>
+                            <span class="size-btn">6</span>
+                            <span class="size-btn">8</span>
+                            <span class="size-btn">10</span>
+                        </div>
+                        <div class="product-price">R$ 39,90</div>
+                        <button class="btn-comprar">Comprar Agora</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">👗</div>
+                    <div class="product-info">
+                        <h3>Vestido Princesa</h3>
+                        <p>Lindo para festas especiais</p>
+                        <div class="product-sizes">
+                            <span class="size-btn">2</span>
+                            <span class="size-btn">4</span>
+                            <span class="size-btn">6</span>
+                            <span class="size-btn">8</span>
+                        </div>
+                        <div class="product-price">R$ 89,90</div>
+                        <button class="btn-comprar">Comprar Agora</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge-desconto">-20%</span>
+                        🩳
+                    </div>
+                    <div class="product-info">
+                        <h3>Bermuda Kids Confort</h3>
+                        <p>Perfeita para brincar</p>
+                        <div class="product-sizes">
+                            <span class="size-btn">2</span>
+                            <span class="size-btn">4</span>
+                            <span class="size-btn">6</span>
+                            <span class="size-btn">8</span>
+                            <span class="size-btn">10</span>
+                        </div>
+                        <div class="product-price">
+                            R$ 47,90
+                            <small>R$ 59,90</small>
+                        </div>
+                        <button class="btn-comprar">Comprar Agora</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🧥</div>
+                    <div class="product-info">
+                        <h3>Moletom Infantil Capuz</h3>
+                        <p>Quentinho e estiloso</p>
+                        <div class="product-sizes">
+                            <span class="size-btn">4</span>
+                            <span class="size-btn">6</span>
+                            <span class="size-btn">8</span>
+                            <span class="size-btn">10</span>
+                            <span class="size-btn">12</span>
+                        </div>
+                        <div class="product-price">R$ 79,90</div>
+                        <button class="btn-comprar">Comprar Agora</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge-desconto">-30%</span>
+                        👟
+                    </div>
+                    <div class="product-info">
+                        <h3>Tênis Infantil LED</h3>
+                        <p>Com luzes piscantes</p>
+                        <div class="product-sizes">
+                            <span class="size-btn">20</span>
+                            <span class="size-btn">22</span>
+                            <span class="size-btn">24</span>
+                            <span class="size-btn">26</span>
+                            <span class="size-btn">28</span>
+                        </div>
+                        <div class="product-price">
+                            R$ 76,90
+                            <small>R$ 109,90</small>
+                        </div>
+                        <button class="btn-comprar">Comprar Agora</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">👕</div>
+                    <div class="product-info">
+                        <h3>Conjunto Esportivo Kids</h3>
+                        <p>Ideal para atividades físicas</p>
+                        <div class="product-sizes">
+                            <span class="size-btn">4</span>
+                            <span class="size-btn">6</span>
+                            <span class="size-btn">8</span>
+                            <span class="size-btn">10</span>
+                        </div>
+                        <div class="product-price">R$ 69,90</div>
+                        <button class="btn-comprar">Comprar Agora</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge-desconto">-15%</span>
+                        👖
+                    </div>
+                    <div class="product-info">
+                        <h3>Calça Jeans Infantil</h3>
+                        <p>Resistente e confortável</p>
+                        <div class="product-sizes">
+                            <span class="size-btn">2</span>
+                            <span class="size-btn">4</span>
+                            <span class="size-btn">6</span>
+                            <span class="size-btn">8</span>
+                        </div>
+                        <div class="product-price">
+                            R$ 67,90
+                            <small>R$ 79,90</small>
+                        </div>
+                        <button class="btn-comprar">Comprar Agora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
